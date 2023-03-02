@@ -3,15 +3,18 @@
 :root {
     --app-bg-gray: #fff;/* used */
     --app-body-text-color: #4c4d4d; /* used */
+    /*
     --app-bg-header-footer: #fff;
     --app-title-color: #fff;
+    */
     --app-header-color: #12274e;  /* used */
     --app-header-font-color: #fff; /* used */
-    --app-footer-font-color: #444;
+    --app-footer-color: #fff;  /* used */
+    --app-footer-font-color: #444; 
     --app-button-color: #e83e8c;  /* used */
     --app-button-font-color: #fff; /* used */
     --app-button-hover-color: #fff; /* used */
-    --app-button-hover-font-color: #e83e8c; /* used */
+    --app-button-hover-font-color:  #e83e8c; /* used */
 }
 
 body {
@@ -55,7 +58,7 @@ header .flex {
 header .title h1 {
     font-size: 17px;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.2px;
     line-height: 50px;
 }
@@ -74,7 +77,7 @@ nav ul li a, .nav-3bar i {
     color: var(--app-header-font-color);
     line-height: 50px;
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     letter-spacing: 0.2px;
     transition: all 0.25s ease-in-out;
@@ -84,12 +87,14 @@ nav ul li a, .nav-3bar i {
 
 .nav-3bar i {
     font-size: 20px;
+    font-weight: 600;
 }
 
 nav ul li a:hover, .nav-3bar i:hover {
-    color: #fff;
-    background-color: var(--app-button-color);
+    color: var(--app-button-color);
+    background-color: transparent;
     display: inline-flex;
+    border-bottom: 2px solid var(--app-button-color);
 }
 
 @media (max-width:768px) {
@@ -128,7 +133,7 @@ section {
 
 .section-1 {
     height: 100vh;
-    background: url("../images/hero-banner.jpg")  rgba(70, 56, 70, 0.8);
+    background: url("../images/hero-banner.jpg")  rgba(70, 56, 70);
     background-position: center; 
     background-size: cover;
     background-blend-mode: multiply;
@@ -147,7 +152,7 @@ section {
 
 .title-middle h1 {
     font-size: 28px;
-    color: var(--app-title-color);
+    color: var(--app-header-font-color);
     font-weight: 300;
     letter-spacing: 0.2px;
     line-height: 40px;
@@ -164,22 +169,22 @@ section {
     font-weight: 600;
     letter-spacing: 0.2px;
     line-height: 40px;
-    background-color: var(--app-button-color);
-    color: var(--app-button-font-color);
+    background-color: transparent;/* var(--app-button-color); */
+    color: var(--app-button-color);
     border-radius: 50px;
-    box-shadow: 0px 2px 8px rgba(213, 207, 207, 0.658);
+    box-shadow: 0px 2px 8px rgba(131, 131, 131, 0.4);
     padding: 15px 35px;
     cursor: pointer;
     text-decoration: none;
     animation: trans 0.5s ease-in;
     animation-delay: 0.3s; 
+    border: 2px solid;
+    border-color: var(--app-button-color);
 }
 
 .button-center a:hover {
-    background-color: var(--app-button-hover-color);
-    color: var(--app-button-hover-font-color);
-    border: 2px solid;
-    border-color: var(--app-button-hover-font-color);
+    background-color: var(--app-button-color);
+    color: var(--app-button-font-color);
 }
 
 @keyframes trans {
@@ -197,10 +202,6 @@ section {
         font-size: 24px;
     }
     
-    .button-center a {
-        font-size: 12px;
-    }
-
     .intro-animation-col {
         width: 90%;
     }
@@ -210,23 +211,6 @@ section {
 /* ABOUT ME - Main                 */
 /* ------------------------------- */
 
-/*
-.section-heading {
-    width: 100%;
-    background-color: var(--app-bg-header-footer);
-    height: 100px;
-    margin-top: 50px;
-}
-
-.logo-animation {
-    height: 100px;
-    width: auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-*/
 /* ------------------------------- */
 /* Bounce                          */
 /* ------------------------------- */
@@ -275,11 +259,11 @@ section {
 }
 
 .section-2 .col-1 {
-    width: calc(40% - 10px);
+    width: calc(50% - 10px);
 }
 
 .section-2 .col-2 {
-    width: calc(60% - 10px);
+    width: calc(50% - 10px);
     padding-left: 20px;
 }
 
@@ -334,21 +318,42 @@ section {
     }
 }
 
-.section-2 .button-center {
+.section-2 .button {
     width: 100%;
     margin: 50px 0px;
     text-align: center;
+}
+
+.button a {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    line-height: 40px;
+    background-color: var(--app-button-color);
+    color: var(--app-button-font-color);
+    border-radius: 50px;
+    box-shadow: 0px 2px 8px rgba(131, 131, 131, 0.4);
+    padding: 15px 35px;
+    cursor: pointer;
+    text-decoration: none;
+    animation: trans 0.5s ease-in;
+    animation-delay: 0.3s; 
+}
+
+.button a:hover {
+    background-color: var(--app-button-hover-color);
+    color: var(--app-button-hover-font-color);
+    border: 2px solid;
+    border-color: var(--app-button-hover-font-color);
 }
 
 /* ------------------------------- */
 /* CONTACT - Main                 */
 /* ------------------------------- */
 
-.section-4 {
-    background: url("../images/picture2-blur.jpg")  rgb(65 0 57 / 0.8);
-    background-blend-mode: darken;
-    background-position: center;
-    background-size: cover;
+.section-3 {
+    background: rgba(236, 236, 236, 0.9);
     /*
     display: flex;
     align-items: center;
@@ -356,63 +361,64 @@ section {
     */
     padding: 80px 0;
     height: auto;
-    color: var(--app-title-color);
 }
 
-.section-4 .col-bg {
+.section-3 .col-bg {
     height: auto;
     padding: 30px;
     animation: trans 0.5s ease-in;
     animation-delay: 0.1s; 
-    background-color: rgb(0 0 0 / 90%);
-    border-radius: 5px;
 }
 
-.section-4 .col-1 {
-    width: calc(40% - 10px);
+.section-3 .col-1 {
+    width: calc(50% - 10px);
 }
 
-.section-4 .col-2 {
-    width: calc(60% - 10px);
+.section-3 .col-2 {
+    width: calc(50% - 10px);
     padding-left: 20px;
 }
 
-.section-4 .col-2 > div {
+.section-3 .col-2 > div {
     padding-bottom: 20px;
 }
 
-.section-4 p {
+.section-3 p {
     text-align: left;
     word-spacing: 5px; 
     letter-spacing: 0.2px; 
     line-height: 40px;
-    font-size: 18px;
+   /* font-size: 18px;*/
 }
 
-.section-4 p a {
+.section-3 i.fa, .section-3 i.fa-brands {
+    color: var(--app-button-hover-font-color);
+}
+
+.section-3 p a {
     text-decoration: none;
     color: inherit;
 }
 
-.section-4 p a:hover {
+.section-3 p a:hover {
     color: var(--app-button-hover-font-color);
 }
 
 @media (max-width:768px) {
-    .section-4 .col-1, .section-4 .col-2  {
+    .section-3 .col-1, .section-3 .col-2  {
         width: 100%;
         padding: 0px;
     }
 }
 
 @media (max-width: 480px) {
-    .section-4 .col-1, .section-4 .col-2  {
+    .section-3 .col-1, .section-3 .col-2  {
         width: 100%;
         padding: 0px;
     }
 }
 
-.section-4 form {
+.section-3 form {
     font-size: 0;
     width: 100%;
 }
@@ -420,22 +426,22 @@ section {
 input[type=text] {
     width: 100%;
     height: 46px;
-    border: 1px solid rgb(255 255 255 / 0.5);
+    border: 1px solid;
+    border-color: rgb(218, 225, 227);
     border-radius: 5px;
     font-weight: 400;
     margin: 10px 0px;
     padding-left: 10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 input[type=text]:focus, input[type=text]:hover {
-    border-color: rgba(43, 42, 42, 0.8);
-    border: solid;
+    border-color: var(--app-button-hover-font-color);
 }
 
 input[type=button] {
     margin: 10px 0px;
-    width: auto;
+    width: auto; 
     height: 46px;
     text-align: center;
     border-radius: 50px;
@@ -447,6 +453,9 @@ input[type=button] {
     color: var(--app-button-font-color);
     background-color: var(--app-button-color);
     transition: border-color 0.25s ease-in-out;
+    box-shadow: 0px 2px 8px rgba(213, 207, 207, 0.658);
+    border: 2px solid;
+    border-color: var(--app-button-hover-font-color);
 }
 
 input[type=button]:hover {
@@ -461,52 +470,17 @@ input[type=button]:hover {
 footer {
     height: 50px;
     width: 100%;
-    background-color: var(--app-bg-header-footer);
+    background-color: var(--app-footer-color);
     color: var(--app-footer-font-color);
 }
 
 footer .flex {
     display: flex;
-    justify-content: space-between;
-}
-
-footer .icons {
-    display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-footer .icons a {
-    text-decoration: none;
-    margin: 5px;
-}
-
-footer .icons a i:hover {
-    color: #d5cfcf;
-    background-color: var(--app-footer-font-color);
-}
-
-.icons > a i {
-    width: 25px;
-    height: 25px;
-    color: var(--app-footer-font-color);
-    border-radius: 50%;
-    text-align: center;
-    line-height: 25px;
-    vertical-align: middle;
-    background-color: #d5cfcf;
-    font-size: 20px;
-}
-
-.icons .circle i {
-    line-height: 25px;
-    text-align: center;
-    vertical-align: middle;
-    color: var(--app-footer-font-color);
+    align-content: center;
 }
 
 footer .copy p {
-    color: var(--app-footer-font-color);
     line-height: 50px;
     font-size: 16px;
     font-weight: 400;
