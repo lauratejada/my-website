@@ -108,7 +108,15 @@ nav ul li a:hover {  /*  .nav-3bar i:hover  */
     }
 
     nav ul li {
-        text-align: right;
+        text-align: right;  
+    }
+
+    nav ul li ~ li {
+        border-top: 1px solid rgba(250, 250, 250, 0.1);
+    }
+
+    nav ul li a:hover {
+        border-bottom: none;
     }
 
     .show-menu-responsive {

@@ -42,3 +42,11 @@ toggleButtonX.addEventListener('click', () => {
         toggleButtonX.classList.add('not-show');
     }
 });
+
+navMenu.addEventListener('click', () => {
+    if (navMenu.className = 'show') {
+        navMenu.classList.remove('show');
+        toggleButtonB.classList.remove('not-show');
+        toggleButtonX.classList.add('not-show');
+    }
+});
