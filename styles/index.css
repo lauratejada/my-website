@@ -3,10 +3,6 @@
 :root {
     --app-bg-gray: #fff;/* used */
     --app-body-text-color: #4c4d4d; /* used */
-    /*
-    --app-bg-header-footer: #fff;
-    --app-title-color: #fff;
-    */
     --app-header-color: #12274e;  /* used */
     --app-header-font-color: #fff; /* used */
     --app-footer-color: #fff;  /* used */
@@ -43,6 +39,10 @@ header {
     height: 50px;
     width: 100%;
     color: var(--app-header-font-color);
+}
+
+.bg-dark {
+    background-color: #0c0c0c;
 }
 
 header h1 {
